@@ -1,0 +1,12 @@
+{
+    "semi": true,
+    "jsxSingleQuote": false,
+    "tabWidth": 2,
+    "endOfLine": "lf",
+    "whitespaceSensitivity": "strict",
+    "printWidth": 100,
+    "singlequotes": false,
+    "trailingComma": "all",
+    "importOrder": ["^@/", "^\\.", "^"],
+    "importOrderSeparation": true
+}

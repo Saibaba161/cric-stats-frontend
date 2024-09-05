@@ -1,3 +1,52 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended", 
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "import",
+    "simple-import-sort"
+  ],
+  "settings": {
+    "next": {
+      "rootDir": "src"
+    }
+  },
+  "rules": {
+    "no-undef": "error",
+    "@typescript-eslint/no-unused-vars": "warn",
+    // "import/order": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "tabWidth": 2,
+        "whitespaceSensitivity": "strict",
+        "printWidth": 100,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "importOrder": ["^@/", "^\\.", "^"],
+        "importOrderSeparation": true
+      }
+    ],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external", "internal"]],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ]
+  },
+  "env": {
+    "es6": true
+  },
+  "ignorePatterns": [
+    "test/*"
+  ]
 }
